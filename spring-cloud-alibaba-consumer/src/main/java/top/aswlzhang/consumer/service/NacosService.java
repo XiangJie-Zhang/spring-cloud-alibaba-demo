@@ -3,9 +3,10 @@ package top.aswlzhang.consumer.service;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import top.aswlzhang.consumer.service.fallback.NacosServiceFallback;
 
 // 声明调用的服务提供者名字
-@FeignClient(name = "nacos-provider")
+@FeignClient(name = "nacos-provider", fallback = NacosServiceFallback.class)
 public interface NacosService {
 
     /**
