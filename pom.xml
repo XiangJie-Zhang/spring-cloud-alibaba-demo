@@ -7,6 +7,8 @@
         <module>spring-cloud-alibaba-provider</module>
         <module>spring-cloud-alibaba-consumer</module>
         <module>spring-cloud-alibaba-gateway</module>
+        <module>spring-could-alibaba-rocketmq-provider</module>
+        <module>spring-cloud-alibaba-rocketmq-consumer</module>
     </modules>
 
     <groupId>top.awslzhang</groupId>

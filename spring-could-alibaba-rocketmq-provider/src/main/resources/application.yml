@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: rocketmq-provider
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          # rocketmq服务地址
+          name-server: 192.168.174.134:9876
+      # bingings写明调用的各个topic名，以及调用名output1,output2
+      bindings:
+        # 下面{}写法是yaml的独特Map写法
+        output1: {destination: test-topic1, content-type: application/json}
+        output2: {destination: test-topic2, content-type: application/json}
+
